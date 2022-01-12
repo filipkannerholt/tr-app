@@ -10,6 +10,7 @@ export default function Run( {navigation} ) {
                        style={{width:'100%', height:'100%'}}>
                          <View style={styles.body}>
                           <RunTimer/>
+                          <Text>Hallå</Text>
                          <View style={styles.mapContainer}>
                           <Map />
                          </View>
