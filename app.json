@@ -6,9 +6,9 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/trappTransparent.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#f6ae2d"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -23,6 +23,11 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
+      },
+      "config": {
+        "googleMaps":{
+          "apiKey" : "AIzaSyDAPnLFx9EkAo8qTboZ8hQTn9iqHRDTHE8"
+        }
       }
     },
     "web": {
