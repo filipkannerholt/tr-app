@@ -101,12 +101,12 @@ export default class GMap extends React.Component {
 
            {/* {this.state.markers.map((value, index) =>{
           return(
-            <Polyline
+            <MapView.Polyline
             // provider={PROVIDER_GOOGLE}
-           coordinates={{
-            latitude: value.markerLatitude,
-            longitude: value.markerLongitude,
-           }}
+           coordinates={[
+            {latitude: value.markerLatitude},
+            {longitude: value.markerLongitude},
+           ]}
           strokeColor="#ffb800" 
           strokeColors={['#ffb800']}
           strokeWidth={6}
@@ -147,5 +147,7 @@ const styles = StyleSheet.create({
   map:{
     width: Dimensions.get("window").width,
     height: Dimensions.get("window").height,
+    borderWidth:1,
+    borderColor:'#f6ae2d',
   },
 });

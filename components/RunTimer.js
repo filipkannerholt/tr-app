@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, View, TouchableHighlight, } from 'react-native';
+import { StyleSheet, Text, View, TouchableHighlight, Image } from 'react-native';
 import { Entypo} from '@expo/vector-icons';
 import { Stopwatch } from 'react-native-stopwatch-timer';
 
@@ -8,6 +8,9 @@ const RunTimer = () => {
   const [resetStopwatch, setResetStopwatch] = useState(false);
 
   return (
+        <View style={styles.container}>
+          <View style={styles.body}>
+          <Image source={require('../assets/trappRunTransparent.png')} style={{width: 100, height: 50}}></Image>
         <View style={styles.sectionStyle}>
           <TouchableHighlight
           style={styles.timerBtn}
@@ -22,14 +25,14 @@ const RunTimer = () => {
             </Entypo>
           </TouchableHighlight>
           <TouchableHighlight
-            underlayColor={'none'}
-            onPress={() => {
-              setIsStopwatchStart(false);
-              setResetStopwatch(true);
-            }}>
-            <Text style={styles.buttonText}>RESET</Text>
+          style={styles.saveBtn}
+          >
+            <Entypo name="save" color={'#006c67'} size={30} margin={10}>
+              <Text style={styles.btnTextSave}> SAVE</Text>
+            </Entypo>
           </TouchableHighlight>
-          
+          </View>
+          <View style={styles.clockContainer}>
           <Stopwatch
             laps
             start={isStopwatchStart}
@@ -43,18 +46,32 @@ const RunTimer = () => {
             }}
             //get time (use for saving the result)
           />
+          <TouchableHighlight
+            underlayColor={'none'}
+            onPress={() => {
+              setIsStopwatchStart(false);
+              setResetStopwatch(true);
+            }}>
+            <Text style={styles.buttonText}>RESET</Text>
+          </TouchableHighlight>
+          </View>
+          </View>
         </View>
+        
   );
 };
 
 export default RunTimer;
 
 const styles = StyleSheet.create({
-  title: {
-    textAlign: 'center',
-    fontSize: 20,
-    fontWeight: 'bold',
-    padding: 20,
+  container:{
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  body:{
+    alignItems: 'center',
+    marginTop: 0,
   },
 
   sectionStyle:{
@@ -62,8 +79,14 @@ const styles = StyleSheet.create({
     height:'40%',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop:20,
-    borderRadius: 5,
+    flexDirection: 'row',
+  },
+
+  clockContainer:{
+    height: 100,
+    width: 250,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   buttonText: {
@@ -74,25 +97,35 @@ const styles = StyleSheet.create({
 
   timerBtn:{
     backgroundColor: '#006c67',
-    opacity: 0.7,
-    width: '100%',
-    height: '30%',
-    marginLeft: 10,
-    marginTop: 10,
-    marginRight: 10,
-    marginBottom: 0,
+    width: '50%',
+    height: '40%',
+    marginLeft: 2,
+    marginRight:2,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 5,
-    elevation: 1.5,
-    shadowOffset: {height: 1.2, width: 1.2},
-    shadowColor: '#015c58',
+  },
+
+  saveBtn:{
+    width: '50%',
+    height: '40%',
+    marginLeft: 2,
+    marginRight:2,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 5,
     borderWidth: 1,
-    borderColor: '#f6ae2d',
+    borderColor: '#006c67',
   },
 
   btnText:{
     color: '#eeeeee',
+    fontSize: 30,
+    margin: 10,
+  },
+
+  btnTextSave:{
+    color: '#006c67',
     fontSize: 30,
     margin: 10,
   },
@@ -103,7 +136,7 @@ const options = {
     backgroundColor: '#eeeeee',
     opacity: 0.7,
     width: '100%',
-    height: '40%',
+    height: '80%',
     margin:10,
     alignItems: 'center',
     justifyContent: 'center',

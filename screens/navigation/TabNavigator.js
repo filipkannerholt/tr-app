@@ -1,11 +1,28 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { HomeStackNavigator, GymStackNavigator, RunStackNavigator, TestTrackerNavigator } from './StackNavigator';
-import { StyleSheet } from 'react-native';
+import { HomeStackNavigator, GymStackNavigator, RunStackNavigator, TestTrackerNavigator, LoginStackNavigator } from './StackNavigator';
 import { Ionicons, FontAwesome, FontAwesome5 } from '@expo/vector-icons';
 
 
 const Tab = createBottomTabNavigator();
+
+const LoginTab = () => {
+    return(
+        <Tab.Navigator 
+            initialRouteName="Login"
+            screenOptions={{
+                headerShown: false
+            }}>
+            <Tab.Screen 
+            options={{
+                tabBarStyle:{
+                    display: 'none'
+                }
+            }}
+            name="Login" component={LoginStackNavigator}/>
+            </Tab.Navigator>
+    )
+}
 
 const BottomTabNavigator = () => {
     return(
@@ -14,7 +31,7 @@ const BottomTabNavigator = () => {
             screenOptions={{
                 tabBarStyle:{
                     backgroundColor:'#f6ae2d',
-                     
+                    headerShown: false
                 },
                 tabBarActiveTintColor: '#eeeeee',
                 headerShown: false}}>
@@ -35,24 +52,10 @@ const BottomTabNavigator = () => {
                 )
             }}/>
 
-            <Tab.Screen name="TestTracker" component={TestTrackerNavigator} options={{
-                tabBarIcon:({ tintColor })=>(
-                    <FontAwesome5 name="running" color={'#006c67'} size={20}/>
-                )
-            }}/>
-
         </Tab.Navigator>
+
+
     )
 }
 
-const styles = StyleSheet.create({
-    // colors: {
-    // black: #121619, 
-    // green: #006c67, 
-    // white: #eeeeee, 
-    // mustard (light): #ffb800, 
-    // mustard (dark): #f6ae2d,
-    //}
-})
-
-export default BottomTabNavigator;
+export {BottomTabNavigator, LoginTab};

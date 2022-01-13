@@ -1,6 +1,6 @@
 import React  from 'react'
 import { View, StyleSheet, ImageBackground } from 'react-native'
-import Map from '../components/Map';
+import GMap from '../components/GMap';
 import RunTimer from '../components/RunTimer';
 
 export default function Run( {navigation} ) {
@@ -10,14 +10,11 @@ export default function Run( {navigation} ) {
                        style={{width:'100%', height:'100%'}}>
                          <View style={styles.body}>
                           <RunTimer/>
-                          <Text>Hallå</Text>
                          <View style={styles.mapContainer}>
-                          <Map />
+                          <GMap />
                          </View>
                          </View>
-                         
                        </ImageBackground>
-      
     </View>
     );
 }
@@ -43,7 +40,7 @@ const styles = StyleSheet.create({
 
     body:{
       alignItems:'center',
-      flex:1,
+      flex:1
     },
 
     timerContainer:{
@@ -51,8 +48,6 @@ const styles = StyleSheet.create({
       height:'40%',
       alignItems: 'center',
       justifyContent: 'center',
-      marginTop:20,
-      borderRadius: 5,
     },
 
     timerBtn:{
@@ -98,8 +93,8 @@ const styles = StyleSheet.create({
 
     mapContainer: {
       width: '100%',
-      height: '55%',
-      margin: 20,
+      height: 750,
+      margin: 10,
       borderWidth:1,
       borderColor: '#f6ae2d',
     }
