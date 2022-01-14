@@ -4,7 +4,7 @@
     "slug": "tr-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/trappTransparent.png",
     "splash": {
       "image": "./assets/trappTransparent.png",
       "resizeMode": "contain",
@@ -21,8 +21,8 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "./assets/trappTransparent.png",
+        "backgroundColor": "#f6ae2d"
       },
       "config": {
         "googleMaps":{
@@ -31,7 +31,7 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/trappTransparent.png"
     }
   }
 }
