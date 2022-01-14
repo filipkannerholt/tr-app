@@ -8,10 +8,6 @@ export default function Home( {navigation} ) {
   const handleLogout = () => {
     firebase.auth()
     .signOut()
-    // .then(()=> {
-    //   navigation("Login")
-    // })
-    // .catch(error => alert(error.message))
 }
     return (
         <View style={styles.container}>
@@ -24,6 +20,7 @@ export default function Home( {navigation} ) {
                                        style={{width:'80%', height:'40%'}}></Image>
                                </View>
                                <View style={styles.content}>
+                                 <Text style={styles.headerText}>Join the community</Text>
                                   <Text style={styles.text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
@@ -36,14 +33,9 @@ export default function Home( {navigation} ) {
                                   style={styles.signOutBtn}>
                                     <Text style={styles.btnText}>Sign out</Text>
                                   </TouchableOpacity>
-                                
                                </View>
-
                              </View>
-                             
-                             
                            </ImageBackground>
-          
         </View>
     );
 }
@@ -59,12 +51,18 @@ const styles = StyleSheet.create({
     text:{
       color: '#006c67',
       margin: 10,
+      fontSize: 20,
+    },
+
+    headerText:{
+      color: '#006c67',
+      margin: 10,
+      fontSize: 40,
     },
 
     body:{
       alignItems:'center',
       flex:1,
-      
     },
 
     header:{
@@ -79,7 +77,7 @@ const styles = StyleSheet.create({
     content:{
       backgroundColor:'#eeeeee',
       width:'90%',
-      height:'40%',
+      height:'50%',
       alignItems: 'center',
       justifyContent: 'center',
       borderWidth: 1,

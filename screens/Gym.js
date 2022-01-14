@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
     text: {
         color: '#006c67',
         margin: 10,
+        fontSize: 25,
     },
 
     contentContainer:{
@@ -45,11 +46,6 @@ const styles = StyleSheet.create({
     textContainer:{
       width: '95%',
       height: '90%',
-      // borderRadius: 5,
-      // borderWidth: 1,
-      // borderColor: '#f6ae2d',
-      // backgroundColor: '#eeeeee',
-      // opacity: 0.75,
       alignItems: 'center',
       justifyContent: 'center',
     },
@@ -59,7 +55,7 @@ const styles = StyleSheet.create({
       height: '50%',
       borderWidth: 1,
       borderColor: '#f6ae2d',
-      marginTop: 115
+      marginTop: 90
     },
 
     // colors:{

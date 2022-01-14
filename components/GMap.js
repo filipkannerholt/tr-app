@@ -1,4 +1,3 @@
-//This is an example code to get Geolocation//
 import React from 'react';
 //import react in our code.
 
@@ -54,14 +53,7 @@ export default class GMap extends React.Component {
       this.state.markers.push({
         markerLongitude: currentLongitude,
         markerLatitude: currentLatitude,
-        // this.state.currentLatitude,
-        // this.state.currentLongitude,
-
       })
-      // this.state.markers.map((value, index) => {
-      //   console.log(value.markerLatitude);
-      //   console.log(value.markerLongitude);
-      // })
     });
   };
   componentWillUnmount = () => {
@@ -81,24 +73,6 @@ export default class GMap extends React.Component {
              longitudeDelta: 0,
          }}
          >
-           {/* <MapView.Polyline
-            // provider={PROVIDER_GOOGLE}
-           coordinate={{
-            latitude: 58.28334,
-            longitude: 12.29398,
-          }}
-          strokeColor="#ffb800" 
-          strokeColors={['#ffb800']}
-          strokeWidth={6}
-          // key={index}
-          /> */}
-           {/* <MapView.Marker
-           provider={PROVIDER_GOOGLE}
-            coordinate={{
-              latitude: 58.28334,
-              longitude: 12.29398,
-            }}/> */}
-
            {/* {this.state.markers.map((value, index) =>{
           return(
             <MapView.Polyline

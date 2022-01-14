@@ -3,9 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Home from '../Home';
 import Gym from '../Gym';
 import Run from '../Run';
-import TestTracker from '../TestTracker';
 import Login from '../Login';
-import Image from 'react-native';
 
 const Stack = createStackNavigator();
 
@@ -24,13 +22,7 @@ const HomeStackNavigator = () => {
         >
             <Stack.Screen 
             options= {{headerShown: false}}
-            name="HomeStack" component={Home} 
-            // options={{
-            //     headerTitle:() => (
-            //         <Image style={{width: 100, height: 50}} source={require('../../assets/trappHome.png')}></Image>
-            //     )
-            // }}
-            />
+            name="HomeStack" component={Home} />
         </Stack.Navigator>
     )
 }
@@ -51,13 +43,7 @@ const GymStackNavigator = () => {
         >
             <Stack.Screen 
             options= {{headerShown: false}}
-            name="GymStack" component={Gym}
-            // options={{
-            //     headerTitle:() => (
-            //         <Image style={{width: 80, height: 40}} source={require('../../assets/trappGym.png')}></Image>
-            //     )
-            // }}
-            />
+            name="GymStack" component={Gym}/>
         </Stack.Navigator>
     )
 }
@@ -77,34 +63,10 @@ const RunStackNavigator = () => {
         >
             <Stack.Screen 
             options= {{headerShown: false}}
-            name="RunStack" component={Run}
-            // options={{
-            //     headerTitle:() => (
-            //         <Image style={{width: 80, height: 40}} source={require('../../assets/trappRun.png')}></Image>
-            //     )
-            // }}
-            />
+            name="RunStack" component={Run}/>
         </Stack.Navigator>
     )
 }
-
-// const TestTrackerNavigator = () => {
-//     return(
-//         <Stack.Navigator 
-//         screenOptions={{
-//             headerStyle: {
-//                 backgroundColor:'#f6ae2d',
-//             },
-//             headerTitleStyle:{
-//                 color: '#006c67',
-//                 fontSize: 30,
-//             },
-//         }}
-//         >
-//             <Stack.Screen name="TestTrackerStack" component= {TestTracker}/>
-//         </Stack.Navigator>
-//     )
-// }
 
 const LoginStackNavigator = () => {
     return(

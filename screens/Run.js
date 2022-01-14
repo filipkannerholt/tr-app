@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
 
     mapContainer: {
       width: '100%',
-      height: 750,
+      height: 650,
       margin: 10,
       borderWidth:1,
       borderColor: '#f6ae2d',

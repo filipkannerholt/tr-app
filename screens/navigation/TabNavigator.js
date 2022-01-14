@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { HomeStackNavigator, GymStackNavigator, RunStackNavigator, TestTrackerNavigator, LoginStackNavigator } from './StackNavigator';
+import { HomeStackNavigator, GymStackNavigator, RunStackNavigator, LoginStackNavigator } from './StackNavigator';
 import { Ionicons, FontAwesome, FontAwesome5 } from '@expo/vector-icons';
 
 
