@@ -5,17 +5,9 @@ import 'firebase/compat/auth';
 
 export default function Login () {
     const [email, setEmail] = useState('')
+    // state and setState for email
     const [password, setPassword] = useState('')
-
-    // const navigation = useNavigation()
-
-    // useEffect(() => {
-    //     auth.onAuthStateChanged(user => {
-    //         if(user) {
-    //             navigation.navigate("Home")
-    //         }
-    //     })
-    // })
+    // state and setState for password
 
     const handleSignUp = () => {
         firebase.auth()
@@ -26,6 +18,7 @@ export default function Login () {
         })
         .catch(error => alert(error.message))
     }
+    // registerMethod by calling firebase auth method
 
     const handleLogin = () => {
         firebase.auth()
@@ -36,6 +29,7 @@ export default function Login () {
         })
         .catch(error => alert(error.message))
     }
+    //loginMethod by calling firebase auth method
 
     return (
         

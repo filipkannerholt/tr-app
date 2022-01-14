@@ -5,7 +5,9 @@ import { Stopwatch } from 'react-native-stopwatch-timer';
 
 const RunTimer = () => {
   const [isStopwatchStart, setIsStopwatchStart] = useState(false);
+  // state and setState for stopwatch start/stop
   const [resetStopwatch, setResetStopwatch] = useState(false);
+  // state and setState for stopwatch reset
 
   return (
         <View style={styles.container}>
@@ -16,7 +18,9 @@ const RunTimer = () => {
           style={styles.timerBtn}
           onPress={() => {
             setIsStopwatchStart(!isStopwatchStart);
+            // start or stop stopwatch depending on its state
             setResetStopwatch(false);
+            // set resetState to false
           }}>
             <Entypo name="stopwatch" color={'#eeeeee'} size={30} margin={10}>
               <Text style={styles.btnText}>
@@ -26,6 +30,8 @@ const RunTimer = () => {
           </TouchableHighlight>
           <TouchableHighlight
           style={styles.saveBtn}
+          // No method to save the time yet.
+          // In progress
           >
             <Entypo name="save" color={'#006c67'} size={30} margin={10}>
               <Text style={styles.btnTextSave}> SAVE</Text>
@@ -50,7 +56,9 @@ const RunTimer = () => {
             underlayColor={'none'}
             onPress={() => {
               setIsStopwatchStart(false);
+              // stop stopwatch
               setResetStopwatch(true);
+              // reset stop watch to 00:00:00
             }}>
             <Text style={styles.buttonText}>RESET</Text>
           </TouchableHighlight>
